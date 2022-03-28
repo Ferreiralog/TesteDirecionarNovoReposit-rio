@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="cadastro.css">
+
+	<!--estilo css nosso-->
+	<link rel="stylesheet" href="../css/style.css">
+	<title>Tela de Login</title>
+</head>
+<body>
+	<div id="conteiner-login">
+		<img src="../imagens/perfil.png" alt="">
+		<form action="">
+			<div>
+				<input type="text" name="email" id="email" placeholder="Digite seu email"> 
+			</div>
+			<div>
+				<input type="password" name="senha" id="senha" placeholder="Digite sua senha"> 
+			</div>
+			<div>
+				<input type="submit" value="logar" onclick="Login(event)">
+			</div>
+		</form>
+	</div>
+	<script>
+  function Login() {
+  event.preventDefault();
+  var usuario = document.getElementsByName('email')[0].value;
+  var senha = document.getElementsByName('senha')[0].value;
+  if (usuario == "adm" && senha == "123") {
+    window.location = "index.html";
+  }
+  else{
+    alert("Dados incorretos, tente novamente");
+  }
+}
+	</script>
+</body>
+</html>
